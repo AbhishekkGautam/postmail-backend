@@ -24,7 +24,7 @@ const postRoutes = require("./routes/post");
 
 //DB Connection
 mongoose
-  .connect(process.env.MONGODB_URI, {
+  .connect(process.env.DATABASE, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useCreateIndex: true,
