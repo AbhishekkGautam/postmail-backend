@@ -7,7 +7,6 @@ const bodyParser = require("body-parser");
 const cookieParser = require("cookie-parser");
 const cors = require("cors");
 const path = require("path");
-const Template = require("../template");
 
 //import routes
 const userRoutes = require("./routes/user");
@@ -36,7 +35,7 @@ app.use("/api", userRoutes);
 app.use("/api", postRoutes);
 
 //PORT
-const port = process.env.PORT || 8000;
+const port = process.env.PORT || 8080;
 
 //Starting a server
 app.listen(port, () => {
