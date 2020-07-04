@@ -24,7 +24,7 @@ const postRoutes = require("./routes/post");
 
 //DB Connection
 mongoose
-  .connect(process.env.MONGODB_URI || "mongodb://localhost:27017/social", {
+  .connect(process.env.MONGODB_URI, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useCreateIndex: true,
