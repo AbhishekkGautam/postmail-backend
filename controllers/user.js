@@ -32,7 +32,7 @@ exports.createUser = (req, res) => {
   user.save((err, success) => {
     if (err) {
       return res.status(400).json({
-        error: "NOT ABLE TO CREATE USER",
+        error: "Email Address Already Exists",
       });
     }
     res.json({ message: "SUCCESSFULLY SIGNED UP!" });
