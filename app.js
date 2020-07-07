@@ -7,6 +7,7 @@ const bodyParser = require("body-parser");
 const cookieParser = require("cookie-parser");
 const cors = require("cors");
 const path = require("path");
+const helmet = require("helmet");
 
 //import routes
 const userRoutes = require("./routes/user");
@@ -28,7 +29,7 @@ mongoose
 app.use(bodyParser.json());
 app.use(cookieParser());
 app.use(cors());
-
+app.use(helmet());
 //My Routes
 app.use("/auth", authRoutes);
 app.use("/api", userRoutes);
