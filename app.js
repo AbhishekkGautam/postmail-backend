@@ -28,8 +28,8 @@ mongoose
 //Middlewares
 app.use(bodyParser.json());
 app.use(cookieParser());
-app.use(cors());
 app.use(helmet());
+app.use(cors());
 //My Routes
 app.use("/auth", authRoutes);
 app.use("/api", userRoutes);
