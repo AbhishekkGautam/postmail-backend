@@ -22,7 +22,7 @@ router.post(
   "/users",
   [
     check("name", "Name should be at least 3 characters").isLength({ min: 3 }),
-    check("email", "Email is required").isEmail(),
+    check("email", "Email address is required").isEmail(),
     check("password", "Password should be at least 6 characters").isLength({
       min: 3,
     }),
